@@ -48,6 +48,11 @@ async function main() {
           res.end(JSON.stringify({ error: "Please enter the person's name first" }));
           return;
         }
+        if (name.trim().length > 60 || (relationship || "").trim().length > 60) {
+          res.writeHead(400, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ error: "Name and relationship must each be under 60 characters" }));
+          return;
+        }
         const result = await generate(modelId, name.trim(), (relationship || "").trim());
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify(result));
