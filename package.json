@@ -1,0 +1,25 @@
+{
+  "name": "qvac-birthday-message-writer",
+  "version": "1.0.0",
+  "description": "Enter a name and your relationship to them, and an on-device AI writes a warm birthday message. No cloud call, no API key.",
+  "type": "module",
+  "main": "src/gui.js",
+  "scripts": {
+    "start": "node src/gui.js",
+    "gui": "node src/gui.js"
+  },
+  "keywords": [
+    "qvac",
+    "on-device-ai",
+    "birthday",
+    "llm",
+    "offline-ai"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@qvac/sdk": "^0.19.0"
+  },
+  "engines": {
+    "node": ">=22.17"
+  }
+}
